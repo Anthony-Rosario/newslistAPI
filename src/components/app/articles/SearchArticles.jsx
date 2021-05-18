@@ -11,7 +11,7 @@ function SearchArticles({ queryNewsArticles, onArticleNameChange, onSubmit }) {
           value={queryNewsArticles}
           onChange={onArticleNameChange}
         />
-        <button aria-label='news-search'>Search</button>
+        <button type="submit" aria-label='news-search'>Search</button>
     </form>
   )
 }

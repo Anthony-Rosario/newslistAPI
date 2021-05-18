@@ -4,10 +4,10 @@ import NewsArticles from './NewsArticles';
 
 
 function NewsArticleList({ articles }) {
+  console.log(articles)
   return (
     <ul aria-label='news-article-list'>
-      
-      <>
+    
       {articles?.map(({ author, title, description, url, content }) => (
         <li key={`${author}-${title}`}>
           <NewsArticles
@@ -19,7 +19,6 @@ function NewsArticleList({ articles }) {
           />
         </li>
       ))}
-      </>
       
     </ul>
   );

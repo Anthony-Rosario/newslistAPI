@@ -13,8 +13,8 @@ export default class SearchNews extends Component {
   async componentDidMount() {
     const articles = await getArticles();
     this.setState({
-      loading: false,
       articles,
+      loading: false,
     });
   }
 
@@ -26,7 +26,6 @@ export default class SearchNews extends Component {
     e.preventDefault();
     this.setState({ loading: true })
     const articles = await getSearchedArticle(this.state.queryNewsArticles)
-    console.log(getArticles())
     this.setState({ 
       loading: false,
       articles
