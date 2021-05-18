@@ -4,18 +4,17 @@ import NewsArticles from './NewsArticles';
 
 
 function NewsArticleList({ articles }) {
-  console.log(articles)
   return (
     <ul aria-label='news-article-list'>
     
-      {articles?.map(({ author, title, description, url, content }) => (
-        <li key={`${author}-${title}`}>
+      {articles.map((article) => (
+        <li key={`${article.author}-${article.title}`}>
           <NewsArticles
-          author={author}
-          title={title}
-          description={description}
-          url={url}
-          content={content}
+          author={article.author}
+          title={article.title}
+          description={article.description}
+          url={article.url}
+          content={article.content}
           />
         </li>
       ))}
