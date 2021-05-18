@@ -11,9 +11,6 @@ describe('NewsSearch Container', () => {
     render(<SearchNews />);
     await screen.findByText('Loading...');
 
-    const ulEl = await screen.findByRole('list', { name: 'news-article-list' });
-    expect(ulEl).not.toBeEmptyDOMElement();
-
     const inputEl = await screen.findByLabelText('Search Articles');
     userEvent.type(inputEl, 'Puppies');
 
